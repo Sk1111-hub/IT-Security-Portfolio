@@ -1,6 +1,4 @@
-# 7/28/2026
-
-# Box Hardening
+# 07/28/2026   Goal - Box Hardening
 
 ## Overview
 Notes on hardening steps taken to secure this VM/box, including rationale for each change.
