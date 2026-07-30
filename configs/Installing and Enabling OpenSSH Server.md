@@ -48,15 +48,31 @@ ssh-keygen -t ed25519 -C "vm key"
 
 I entered a passphrase to encrypt the private key.
 
-## 5. Network Adapter Issue
+## 5. Setting Up SSH Key-Based Authentication
+
+I copied my public key to the VM so key-based login would work:
+
+```bash
+ssh-copy-id sk1111@<VM_IP>
+```
+
+I then tested logging in with the key before making any further changes:
+
+```bash
+ssh sk1111@<VM_IP>
+```
+
+Confirmed the login succeeded without a password prompt, meaning key-based authentication was working correctly before I proceeded to disable password authentication in the SSH hardening step.
+
+## 6. Network Adapter Issue
 
 I then ran into an issue because my network adapter still had default settings (NAT), which was preventing the connection I needed. I powered off the VM and switched the network configuration from **NAT** to **Bridge Adapter**.
 
-## 6. Discovering SSH Wasn't Running
+## 7. Discovering SSH Wasn't Running
 
 After the network fix, I discovered SSH wasn't running on the VM at all.
 
-## 7. Installing and Enabling OpenSSH Server
+## 8. Installing and Enabling OpenSSH Server
 
 ```bash
 sudo apt install openssh-server -y
@@ -78,3 +94,5 @@ Checked that port 22 was actually listening:
 
 ```bash
 ss -tlnp | grep 22
+```
+
