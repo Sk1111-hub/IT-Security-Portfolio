@@ -1,3 +1,8 @@
+## Projects
+
+- [Active Directory Homelab (Azure)](./active-directory-homelab/README.md) — Deployed and troubleshot a functional AD environment: DC setup, VNet/NSG configuration, domain join issues
+- [Linux Hardening](./linux-hardening/README.md) — SSH, UFW, fail2ban, AppArmor configuration writeups
+
 # Linux Learning Journal
 
 This repo documents my hands-on journey learning Linux, with a focus on
