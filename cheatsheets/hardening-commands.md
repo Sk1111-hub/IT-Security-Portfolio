@@ -1,6 +1,6 @@
 # Linux Hardening Cheatsheet
 
-Quick-reference commands used throughout the hardening process. For full context and reasoning behind each step, see [`configs/hardening.md`](../configs/hardening.md).
+Quick-reference commands used throughout the hardening process. For full context and reasoning behind each step, see 
 [`configs/`](../configs).
 
 ## System Updates & Package Management
